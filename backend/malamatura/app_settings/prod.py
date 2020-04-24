@@ -27,4 +27,4 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SECRET_KEY = read_variable('/private/secrets', 'SECRET_KEY') or get_variable('SECRET_KEY', 'unknown')
 EMAIL_HOST_PASSWORD = read_variable('/private/secrets', 'EMAIL_HOST_PASSWORD') or get_variable('EMAIL_HOST_PASSWORD', 'unknown')
 
-API_THROTTLE_RATE = 10
+ALLOW_REPEATED_TESTS = get_variable('ALLOW_REPEATED_TESTS', True)

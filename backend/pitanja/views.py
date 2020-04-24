@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.utils.timezone import now
 from django.shortcuts import render
 from rest_framework import status
@@ -17,7 +18,7 @@ def pocni_test(request):
         ucenik = request.user.ucenik
         test = Test.objects.get(id=request.data['test'])
         test_ucenika = TestUcenika.objects.filter(test=test, ucenik=ucenik)
-        if len(test_ucenika) > 0:
+        if len(test_ucenika) > 0 and not settings.ALLOW_REPEATED_TESTS:
             return Response(status=status.HTTP_409_CONFLICT)
         else:
             test_ucenika = TestUcenika.objects.create(test=test, ucenik=ucenik)

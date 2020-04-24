@@ -1,4 +1,5 @@
 from .base import *
+from .utils import get_variable
 
 DEBUG = True
 
@@ -17,4 +18,4 @@ SECRET_KEY = 'fpmh!s6dc3h_^#zuk&(qy6(r1^0!k-q%60b03ki4gg5jpmi1v&'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-API_THROTTLE_RATE = 100
+ALLOW_REPEATED_TESTS = get_variable('ALLOW_REPEATED_TESTS', True)
