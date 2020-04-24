@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="275" it="0" lt="274" ct="141" ts="1587743521710" s="true" lb="jedan_ucenik-1" rc="200" rm="OK" tn="" dt="text" de="" by="250" sc="1" ec="0" ng="0" na="0" hn="BrankoMBP">
+  <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Content-Type: application/ocsp-response
+Cache-Control: public, max-age=300
+Date: Fri, 24 Apr 2020 15:52:01 GMT
+Server: ocsp_responder
+Content-Length: 5
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Connection: close
+</responseHeader>
+  <requestHeader class="java.lang.String">Connection: close
+Accept-Language: en-US,en;q=0.5
+Host: ocsp.pki.goog
+Content-Type: application/ocsp-request
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:76.0) Gecko/20100101 Firefox/76.0
+Accept: */*
+Content-Length: 126
+</requestHeader>
+  <responseData class="java.lang.String">0&#x3;
+&#x1;&#x1;</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+  <cookies class="java.lang.String"></cookies>
+  <method class="java.lang.String">POST</method>
+  <queryString class="java.lang.String">0R0P0N0L0J0	&#x6;&#x5;+&#xe;&#x3;&#x2;&#x1a;&#x5;&#x0;&#x4;&#x14;BF0�&apos;&#x19;��p���s�_f8&#x17;�&#x4;&#x14;���n&#x10;�ϛ�`�&#x18;�&#x1b;��}	�+&#x2;&#x11;&#x0;�s�&#x4;�0%&#x8;&#x0;&#x0;&#x0;&#x0;7�+</queryString>
+  <java.net.URL>http://ocsp.pki.goog/gts1o1</java.net.URL>
+</httpSample>
+
+</testResults>
