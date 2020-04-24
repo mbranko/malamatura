@@ -67,4 +67,8 @@ Pokretanje aplikacije:
 docker run --name malamatura -p 8000:8000 --link malamaturadb -d malamatura:latest
 ```
 
+Ili ako cemo da zabranimo da se isti test radi vise puta:
+```bash
+docker run --name malamatura -e ALLOW_REPEATED_TESTS=False -p 8000:8000 --link malamaturadb -d malamatura:latest
+```
 

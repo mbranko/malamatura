@@ -19,6 +19,9 @@ def read_variable(file_name, variable_name):
         with open(file_name) as lines:
             lines = chain(("[top]",), lines)
             parser.read_file(lines)
+        var = parser['top'][variable_name]
+        if var.upper() in ('TRUE', 'FALSE'):
+            return bool(var.capitalize())
         return parser['top'][variable_name]
     except IOError as ex:
         # ignorisi ovu gresku jer se javlja samo kod pravljenja Docker image-a
