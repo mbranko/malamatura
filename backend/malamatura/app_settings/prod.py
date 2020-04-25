@@ -1,7 +1,7 @@
 from .base import *
 from .utils import read_variable, get_variable
 
-ALLOWED_HOSTS = ['localhost', 'malamatura.rs', 'www.malamatura.rs']
+ALLOWED_HOSTS = ['localhost', '116.203.220.167']
 DEBUG = False
 
 DATABASES = {
