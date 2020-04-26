@@ -64,7 +64,14 @@ docker run --name malamaturadb -e POSTGRES_USER=malamatura -e POSTGRES_PASSWORD=
 
 Pokretanje aplikacije:
 ```bash
-docker run --name malamatura -p 8000:8000 --link malamaturadb -d malamatura:latest
+docker run \
+  --name malamatura \
+  -p 8000:8000 \
+  --link malamaturadb \
+  -v `pwd`/malamatura.log:/app/log/malamatura.log \
+  -v `pwd`/uwsgi.log:/app/log/uwsgi.log \
+  --detach \
+  malamatura:latest
 ```
 
 Ili ako cemo da zabranimo da se isti test radi vise puta:

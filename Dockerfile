@@ -14,6 +14,7 @@ RUN set -x \
     python3 \
     uwsgi-python3 \
     uwsgi-router_static \
+    uwsgi-logfile \
     mariadb-dev \
     postgresql-dev \
     gcc \
@@ -40,9 +41,11 @@ COPY --from=angular /app/angular-app/dist /app/frontend/dist
 RUN chmod +x /app/run_prod.sh
 WORKDIR /app
 RUN mkdir /private
+RUN rm -rf /app/log
+RUN mkdir /app/log
 ARG django_settings=prod
 ENV DJANGO_SETTINGS=$django_settings
 RUN python3 /app/manage.py collectstatic --noinput 
-RUN rm -rf /app/log/malamatura.log
+RUN rm -rf /app/log/*
 EXPOSE 8000
 CMD ["/app/run_prod.sh"]
